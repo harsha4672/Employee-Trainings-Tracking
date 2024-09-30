@@ -33,6 +33,8 @@ The application processes training data stored in a `.json` format (or uses the 
    - Find expired or soon-to-expire trainings.
    - Exit the application.
 
+## Application Output
+
 ### Example Input
 
 You can either input your own `.json` file with training records or use the default file (`trainings.txt`). The application prompts you for your preferred task and any relevant information needed (like fiscal year or date).
