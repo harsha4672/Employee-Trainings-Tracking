@@ -7,6 +7,12 @@ def load_data(file_name):
     with open(file_name, 'r') as data_file:
         return json.load(data_file)
 
+# Helper function to save output to file
+def save_output_to_file(output, file_name):
+    with open(file_name, 'w') as outfile:
+        json.dump(output, outfile, indent=4)
+    print(f"Output saved to {file_name}")
+
 # Helper function to convert dates from string to date type
 def convert_to_date(date_strng):
     if date_strng:
@@ -161,6 +167,9 @@ if __name__ == '__main__':
             print("\nTraining Completion Count:")
             print(json.dumps(completed_counts, indent=4))
 
+            # Save output to a JSON file
+            save_output_to_file(completed_counts, 'completed_counts.json')
+
         elif choice == '2':
             # Task 2: Fiscal year-based training completions
             print("\nWould you like to use the default list of trainings?")
@@ -189,6 +198,9 @@ if __name__ == '__main__':
             print(f"\nPeople who completed the specified trainings in fiscal year {fiscal_year}:")
             print(json.dumps(trainings_in_fiscal_year, indent=4))
 
+            # Save output to a JSON file
+            save_output_to_file(trainings_in_fiscal_year, 'trainings_in_fiscal_year.json')
+
 
         elif choice == '3':
             # Task 3: Find expired or expiring trainings
@@ -196,6 +208,9 @@ if __name__ == '__main__':
             expired_trainings = find_expired_trainings(training_records, date_to_check)
             print(f"\nPeople with expired or expiring trainings by {date_to_check}:")
             print(json.dumps(expired_trainings, indent=4))
+
+            # Save output to a JSON file
+            save_output_to_file(expired_trainings, 'expired_trainings.json')
 
         elif choice == '4':
             # Exit the application
