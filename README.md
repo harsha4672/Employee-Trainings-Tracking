@@ -63,7 +63,7 @@ The output is shown as JSON-formatted data for each task. Example results for ea
 1. Clone this repository:
     ```bash
     git clone https://github.com/harsha4672/Employee-Trainings-Tracking.git
-    cd Employee-Trainings-Tracker
+    cd Employee-Trainings-Tracking
     ```
 
 2. Run the application:
