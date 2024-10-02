@@ -130,7 +130,7 @@ if __name__ == '__main__':
     file_choice = input("Enter your choice (1/2): ").strip()
     
     if file_choice == '1':
-        file_path = input("Enter the full path of the JSON file (e.g., 'C:/path/to/your/trainings.json'): ")
+        file_path = input("Enter the full path of the JSON file (e.g., C:/path/to/your/trainings.json): ")
         try:
             training_records = load_data(file_path)
             print(f"Loaded training records from {file_path}.")
